@@ -1,9 +1,31 @@
 # #!/usr/bin/env python
 # # -*- coding: utf-8 -*-
 
+# import unittest
+# import subprocess
+# import echo
+
+# # Your test case class goes here
+# class TestEcho(unittest.TestCase):
+#     def test_help(self):
+#         """ Running the program without arguments should show usage. """
+
+#         # Run the command `python ./echo.py -h` in a separate process, then
+#         # collect it's output.
+#         process = subprocess.Popen(
+#             ["python", "./echo.py", "-h"],
+#             stdout=subprocess.PIPE)
+#         stdout, _ = process.communicate()
+#         usage = open("./USAGE", "r").read()
+
+#         self.assertEquals(stdout, usage)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
 import unittest
 import subprocess
-from echo import uppercase, lowercase, titlecase
+from echo import *
 
 
 class my_tests(unittest.TestCase):
@@ -28,6 +50,5 @@ class my_tests(unittest.TestCase):
     def test_title(self):
         self.assertEqual(titlecase("hello world"), "Hello World")
 
-
-if __name__ == "__main__":
-    unittest.main()
+    if __name__ == "__main__":
+        unittest.main()

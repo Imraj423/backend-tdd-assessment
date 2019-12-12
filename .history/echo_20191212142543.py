@@ -22,7 +22,6 @@ __author__ = "Imraj423"
 #     pass
 import argparse
 
-
 def uppercase(string):
     return string.upper()
 

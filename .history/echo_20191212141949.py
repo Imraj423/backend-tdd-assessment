@@ -21,6 +21,7 @@ __author__ = "Imraj423"
 # if __name__ == '__main__':
 #     pass
 import argparse
+import unittest
 
 
 def uppercase(string):
@@ -35,14 +36,14 @@ def titlecase(string):
     return string.title()
 
 
-def he1p(name=None):
-    return '''usage: echo.py [-h] [-u] [-l] [-t] text\n
-Perform transformation on input text.\n\npositional arguments:
-  text         text to be manipulated\n\noptional arguments:
-  -h, --help   show this help message and exit
-  -u, --upper  convert text to uppercase
-  -l, --lower  convert text to lowercase
-  -t, --title  convert text to titlecase'''
+# def msg(name=None):
+#     return '''usage: echo.py [-h] [-u] [-l] [-t] text\n
+# Perform transformation on input text.\n\npositional arguments:
+#   text         text to be manipulated\n\noptional arguments:
+#   -h, --help   show this help message and exit
+#   -u, --upper  convert text to uppercase
+#   -l, --lower  convert text to lowercase
+#   -t, --title  convert text to titlecase'''
 
 
 def main():
@@ -59,9 +60,9 @@ def main():
         print(lowercase('hello world'))
     if args.title:
         print(titlecase('hello world'))
-    if args.help:
-        print(he1p())
+    # if args.h:
+    #     print(msg())
 
 
 if __name__ == "__main__":
-    main()
+    unittest.main()

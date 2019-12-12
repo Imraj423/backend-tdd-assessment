@@ -21,6 +21,7 @@ __author__ = "Imraj423"
 # if __name__ == '__main__':
 #     pass
 import argparse
+import sys
 
 
 def uppercase(string):
@@ -35,14 +36,14 @@ def titlecase(string):
     return string.title()
 
 
-def he1p(name=None):
-    return '''usage: echo.py [-h] [-u] [-l] [-t] text\n
-Perform transformation on input text.\n\npositional arguments:
-  text         text to be manipulated\n\noptional arguments:
-  -h, --help   show this help message and exit
-  -u, --upper  convert text to uppercase
-  -l, --lower  convert text to lowercase
-  -t, --title  convert text to titlecase'''
+# def msg(name=None):
+#     return '''usage: echo.py [-h] [-u] [-l] [-t] text\n
+# Perform transformation on input text.\n\npositional arguments:
+#   text         text to be manipulated\n\noptional arguments:
+#   -h, --help   show this help message and exit
+#   -u, --upper  convert text to uppercase
+#   -l, --lower  convert text to lowercase
+#   -t, --title  convert text to titlecase'''
 
 
 def main():
@@ -54,13 +55,13 @@ def main():
                         help='show this help message and exit')
     args = parser.parse_args()
     if args.upper:
-        print(uppercase('hello world'))
+        print(uppercase(sys.argv[2]))
     if args.lower:
-        print(lowercase('hello world'))
+        print(lowercase(sys.argv[2]))
     if args.title:
-        print(titlecase('hello world'))
-    if args.help:
-        print(he1p())
+        print(titlecase(sys.argv[2]))
+    if args.h:
+        print(msg())
 
 
 if __name__ == "__main__":

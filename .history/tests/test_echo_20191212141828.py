@@ -1,6 +1,8 @@
 # #!/usr/bin/env python
 # # -*- coding: utf-8 -*-
 
+
+
 import unittest
 import subprocess
 from echo import uppercase, lowercase, titlecase
@@ -28,6 +30,5 @@ class my_tests(unittest.TestCase):
     def test_title(self):
         self.assertEqual(titlecase("hello world"), "Hello World")
 
-
-if __name__ == "__main__":
-    unittest.main()
+    if __name__ == "__main__":
+        unittest.main()

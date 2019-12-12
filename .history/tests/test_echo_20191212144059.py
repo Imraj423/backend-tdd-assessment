@@ -29,5 +29,5 @@ class my_tests(unittest.TestCase):
         self.assertEqual(titlecase("hello world"), "Hello World")
 
 
-if __name__ == "__main__":
-    unittest.main()
+    if __name__ == "__main__":
+        unittest.main()

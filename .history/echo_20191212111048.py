@@ -21,6 +21,7 @@ __author__ = "Imraj423"
 # if __name__ == '__main__':
 #     pass
 import argparse
+import sys
 
 
 def uppercase(string):
@@ -35,7 +36,7 @@ def titlecase(string):
     return string.title()
 
 
-def he1p(name=None):
+def msg(name=None):
     return '''usage: echo.py [-h] [-u] [-l] [-t] text\n
 Perform transformation on input text.\n\npositional arguments:
   text         text to be manipulated\n\noptional arguments:
@@ -47,20 +48,19 @@ Perform transformation on input text.\n\npositional arguments:
 
 def main():
     parser = argparse.ArgumentParser(add_help=False)
-    parser.add_argument("--upper", "-u", help='convert text to uppercase')
-    parser.add_argument("--lower", "-l", help='convert text to lowercase')
-    parser.add_argument("--title", "-t", help='convert text to titlecase')
-    parser.add_argument("-help", "--h", action="store_true",
-                        help='show this help message and exit')
+    parser.add_argument("--upper", "-u")
+    parser.add_argument("--lower", "-l")
+    parser.add_argument("--title", "-t",)
+    parser.add_argument("-help", "--h", action="store_true")
     args = parser.parse_args()
     if args.upper:
-        print(uppercase('hello world'))
+        print(uppercase(sys.argv[2]))
     if args.lower:
-        print(lowercase('hello world'))
+        print(lowercase(sys.argv[2]))
     if args.title:
-        print(titlecase('hello world'))
-    if args.help:
-        print(he1p())
+        print(titlecase(sys.argv[2]))
+    if args.h:
+        print(msg())
 
 
 if __name__ == "__main__":
