@@ -26,7 +26,9 @@ def help(string):
 
 def create_parser():
     parser = argparse.ArgumentParser(
-        description="Perform transformation on input text.")
+        description="Changes text case to a different type")
+    
+    
     parser.add_argument(
         '-u', '--upper', help='convert text to uppercase',
         action='store_true')
@@ -37,13 +39,23 @@ def create_parser():
         '-t', '--title', help='convert text to titlecase ',
         action='store_true')
     parser.add_argument(
-        'text',  help='text to be manipulated')
+        'text', help='text to be manipulated')
     return parser
+    
+
+def he1p(name=None):
+    return '''usage: echo.py [-h] [-u] [-l] [-t] text\n
+Perform transformation on input text.\n\npositional arguments:
+  text         text to be manipulated\n\noptional arguments:
+  -h, --help   show this help message and exit
+  -u, --upper  convert text to uppercase
+  -l, --lower  convert text to lowercase
+  -t, --title  convert text to titlecase'''
 
 
-def main():
+def main(args):
     parser = create_parser()
-    parsed_args = parser.parse_args()
+    parsed_args = parser.parse_args(args)
     text = parsed_args.text
 
     if parsed_args.upper:

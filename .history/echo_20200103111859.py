@@ -38,7 +38,25 @@ def create_parser():
         action='store_true')
     parser.add_argument(
         'text',  help='text to be manipulated')
+    # parser.add_argument(
+    #     '-h', '--help', help='''usage: echo.py [-h] [-u] [-l] [-t] text\n
+    #     Perform transformation on input text.\n\npositional arguments:
+    #     text         text to be manipulated\n\noptional arguments:
+    #     -h, --help   show this help message and exit
+    #     -u, --upper  convert text to uppercase
+    #     -l, --lower  convert text to lowercase
+    #     -t, --title  convert text to titlecase''')
     return parser
+
+
+# def he1p(name=None):
+#     return '''usage: echo.py [-h] [-u] [-l] [-t] text\n
+# Perform transformation on input text.\n\npositional arguments:
+#   text         text to be manipulated\n\noptional arguments:
+#   -h, --help   show this help message and exit
+#   -u, --upper  convert text to uppercase
+#   -l, --lower  convert text to lowercase
+#   -t, --title  convert text to titlecase'''
 
 
 def main():

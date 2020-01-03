@@ -20,13 +20,13 @@ class my_tests(unittest.TestCase):
         self.assertEquals(stdout, usage)
 
     def test_upper(self):
-        self.assertEquals(echo.uppercase("hello world"), "HELLO WORLD")
+        self.assertEquals(uppercase("hello world"), "HELLO WORLD")
 
     def test_lower(self):
-        self.assertEquals(echo.lowercase("HELLO WORLD"), "hello world")
+        self.assertEquals(lowercase("HELLO WORLD"), "hello world")
 
     def test_title(self):
-        self.assertEqual(echo.titlecase("hello world"), "Hello World")
+        self.assertEqual(titlecase("hello world"), "Hello World")
 
 
 if __name__ == "__main__":
